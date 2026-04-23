@@ -28,7 +28,7 @@ asrc-o = $(call make_stm32f4_objs,$(ASRC))
 
 LINKDEPS += $(cfiles-o) $(src-o) $(asrc-o) $(hfiles) $(LDSCRIPT)
 CFLAGS += $(addprefix -I,$(EXTRAINCDIRS)) # extra includes defined in Makefile.stm32f4
-CFLAGS += -Icommon -mcpu=cortex-m4 -DSS_VER=1 $(CDEFS) -DBENCH_CYC -O3# CDEFS defined in Makefile.stm32f4
+CFLAGS += -Icommon -mcpu=cortex-m4 -DSS_VER=1 $(CDEFS)# CDEFS defined in Makefile.stm32f4
 
 all: hex/stm.hex
 
